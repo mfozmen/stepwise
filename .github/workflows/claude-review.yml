@@ -63,6 +63,11 @@ jobs:
             --max-turns 60
             --allowedTools "mcp__github_inline_comment__create_inline_comment,Read,Grep,Glob,Bash(gh pr comment:*),Bash(gh pr diff:*),Bash(gh pr view:*)"
           prompt: |
+            Review pull request #${{ github.event.pull_request.number || github.event.issue.number }}
+            of ${{ github.repository }}. Always pass that number explicitly
+            (`gh pr diff <N>`, `gh pr comment <N>`) — discovering it is not allowed by the
+            tool allowlist, so a bare `gh pr list` will be denied and cost you the run.
+
             You are reviewing this pull request as an ADVISORY reviewer for
             Stepwise — an open-source Claude Code plugin (a `/stepwise` skill)
             that teaches a dense technical document to a newcomer: 2–3 sections
