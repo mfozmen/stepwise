@@ -2,6 +2,13 @@
   "name": "stepwise",
   "version": "0.1.0",
   "description": "Teach a dense technical document to someone new to it — step by step, at the user's pace, accumulating into one persistent page.",
+  "keywords": [
+    "explanation",
+    "onboarding",
+    "documentation",
+    "teaching",
+    "claude-code"
+  ],
   "license": "MIT",
   "author": "Mehmet Fahri Özmen",
   "homepage": "https://github.com/mfozmen/stepwise",
