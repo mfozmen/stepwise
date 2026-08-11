@@ -1,0 +1,13 @@
+{
+  "name": "stepwise",
+  "owner": {
+    "name": "mfozmen"
+  },
+  "plugins": [
+    {
+      "name": "stepwise",
+      "source": "./",
+      "description": "Teach a dense technical document to someone new to it — step by step, at the user's pace, accumulating into one persistent page."
+    }
+  ]
+}

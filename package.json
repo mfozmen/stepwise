@@ -1,0 +1,19 @@
+{
+  "name": "stepwise",
+  "version": "0.1.0",
+  "description": "Teach a dense technical document to someone new to it — step by step, at the user's pace, accumulating into one persistent page.",
+  "license": "MIT",
+  "author": "Mehmet Fahri Özmen",
+  "homepage": "https://github.com/mfozmen/stepwise",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mfozmen/stepwise.git"
+  },
+  "scripts": {
+    "release": "release-it"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^10.0.0",
+    "release-it": "^19.0.0"
+  }
+}
