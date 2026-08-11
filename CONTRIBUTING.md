@@ -51,6 +51,9 @@ npm install
 npm run release
 ```
 
+The first release is cut explicitly as `npm run release -- 1.0.0`; after that the version
+comes from the commits.
+
 It bumps the version (in both `package.json` and `.claude-plugin/plugin.json`), updates
 `CHANGELOG.md`, tags the release, and creates a GitHub release — all derived from your
 Conventional Commits.
