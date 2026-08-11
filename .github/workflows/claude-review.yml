@@ -57,7 +57,6 @@ jobs:
           # Subscription auth — do NOT add an Anthropic API key here.
           claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          show_full_output: true
           # allowedTools is a strict allowlist — anything omitted is DENIED. It must
           # cover BOTH how the reviewer reads the files and how it publishes findings.
           claude_args: |
