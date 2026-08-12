@@ -29,7 +29,7 @@ Do exactly this:
      numbered sequence. Do not compress the whole document into a summary — the sequence *is* the
      deliverable.
    The language setting changes shape for the same reason. Read `~/.stepwise/config.md` and honor
-   it. **If it is missing, do not ask and do not write it** — a first-run answer belongs to the user,
+   it. **If it is missing — or present but unreadable — do not ask and do not write it** — a first-run answer belongs to the user,
    and a guess written to the global file would silently govern their later runs too. Explain in the
    language of your dispatch prompt, and say in your final message that no language was configured.
    Every other rule stands unchanged: fact / proposal / uncertainty separation, one non-decorative
