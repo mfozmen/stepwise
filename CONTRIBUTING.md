@@ -26,8 +26,9 @@ no model training.
 A change that weakens either one is not a refinement, and the AI review is asked to flag it.
 
 If you edit `SKILL.md`, check `commands/stepwise.md` and `agents/stepwise.md` still agree with
-it. The agent deliberately relaxes the pacing rule (a subagent can't receive a "continue") —
-that exception is the only one, and it stays written down where it applies.
+it. The agent deliberately diverges where it has no choice — a subagent can't receive a "continue",
+and can't ask the first-run language question. Each divergence stays written down where it applies,
+with its reason.
 
 ## Conventions
 

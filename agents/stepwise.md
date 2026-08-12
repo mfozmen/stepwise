@@ -23,7 +23,7 @@ Do exactly this:
    on, or otherwise write back to the source. If you can only fetch part of it, **stop and report
    that** — a partial fetch is the one failure you must never paper over.
 3. **You never ask interactive questions and you never wait for "continue"** — you cannot receive
-   one. So the pacing rules change shape for you, and only these two:
+   one. Two rules take a different shape for you because of that:
    - Produce **every** section in one run, in the narrative order the skill's step 2 defines.
    - Keep each section the skill's size (2–4 paragraphs + 1 visual + at most 1 table) and keep the
      numbered sequence. Do not compress the whole document into a summary — the sequence *is* the

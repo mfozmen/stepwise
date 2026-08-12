@@ -47,6 +47,9 @@ Turkish
   their answer, confirm in one line, then continue into the explanation. Ask **once**; never ask
   again on later runs.
 - **File present** — use its language silently. Don't announce it, don't re-ask.
+- **File present but unreadable** (empty, malformed, no language in it) — treat it as missing and
+  ask, mentioning that the existing file couldn't be read. Rewrite it whole from their answer; never
+  half-trust a broken config.
 
 The setting governs **your output**: the page, the chat recaps, the headings, the diagram labels.
 It does not govern the source — a source in another language is still explained in the configured
