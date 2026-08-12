@@ -9,7 +9,7 @@ and follow its **"Language: ask once, remember"** section, which owns the exact 
 its format, and what the setting governs.
 
 From `$ARGUMENTS`, take the natural-language request (e.g. `/stepwise:config explain in English`,
-`Türkçe anlat`). No source document is needed — this only writes `~/.stepwise/config.md`.
+`/stepwise:config switch to Turkish`). No source document is needed — this only writes `~/.stepwise/config.md`.
 
 If the request names no clear language, ask one clarifying question rather than writing a guess. If
 `$ARGUMENTS` is empty, tell the user the language currently configured and ask what to change it to.
