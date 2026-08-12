@@ -28,6 +28,45 @@ source. In those cases just answer directly.
 
 ---
 
+## Language: ask once, remember
+
+Stepwise keeps one setting — the language it explains in — in `~/.stepwise/config.md`:
+
+```markdown
+# Stepwise config
+
+## Language
+
+Turkish
+```
+
+**Before the first explanation of a session, read that file.**
+
+- **File missing** (first run) — ask the user, as your first act, which language they want to be
+  taught in. Offer the language they wrote to you in as the obvious answer. Write the file with
+  their answer, confirm in one line, then continue into the explanation. Ask **once**; never ask
+  again on later runs.
+- **File present** — use its language silently. Don't announce it, don't re-ask.
+- **File present but unreadable** (empty, malformed, no language in it) — treat it as missing and
+  ask, mentioning that the existing file couldn't be read. Rewrite it whole from their answer; never
+  half-trust a broken config.
+
+The setting governs **your output**: the page, the chat recaps, the headings, the diagram labels.
+It does not govern the source — a source in another language is still explained in the configured
+language, with original terms kept where translating them would lose the meaning (product names,
+field names, error strings).
+
+The user can change it later with `/stepwise:config <what they want>` (e.g.
+`/stepwise:config explain in English`). That is the same act: interpret the request, write the file,
+confirm in one line; asked with no request at all, report the language currently configured and ask
+what to change it to. The user never hand-edits it. If the request names no clear language, ask one
+clarifying question rather than writing a guess — and never write an empty or partial config.
+
+Running as a subagent is the one case where this setting is read but never written — see
+`agents/stepwise.md`.
+
+---
+
 ## The contract: establish it up front
 
 The user usually states the rules themselves. Take what they say literally as
@@ -50,6 +89,9 @@ user asked for "small pieces" and the second turn dumps everything at once.
 ## The process
 
 ### 0. Get the source — the whole thing, before anything else
+
+Settle the language first (above): read `~/.stepwise/config.md`, and on a first run ask for it
+before anything else. Then load the source.
 
 The user points at the source; they rarely hand you its text. Resolve it first,
 and don't start explaining until you have it in full:

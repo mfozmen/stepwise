@@ -23,11 +23,15 @@ Do exactly this:
    on, or otherwise write back to the source. If you can only fetch part of it, **stop and report
    that** — a partial fetch is the one failure you must never paper over.
 3. **You never ask interactive questions and you never wait for "continue"** — you cannot receive
-   one. So the pacing rules change shape for you, and only these two:
+   one. Two rules take a different shape for you because of that:
    - Produce **every** section in one run, in the narrative order the skill's step 2 defines.
    - Keep each section the skill's size (2–4 paragraphs + 1 visual + at most 1 table) and keep the
      numbered sequence. Do not compress the whole document into a summary — the sequence *is* the
      deliverable.
+   The language setting changes shape for the same reason. Read `~/.stepwise/config.md` and honor
+   it. **If it is missing — or present but unreadable — do not ask and do not write it** — a first-run answer belongs to the user,
+   and a guess written to the global file would silently govern their later runs too. Explain in the
+   language of your dispatch prompt, and say in your final message that no language was configured.
    Every other rule stands unchanged: fact / proposal / uncertainty separation, one non-decorative
    visual per section, uncertainty callouts, claim-carrying headings, and adding nothing the source
    does not contain.
