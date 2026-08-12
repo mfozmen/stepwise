@@ -8,7 +8,7 @@ most changes are to markdown, not code.
 ```
 skills/stepwise/
   SKILL.md         # the brain: the method, its trigger, and the source-loading step
-commands/          # slash command: /stepwise
+commands/          # slash commands: /stepwise, /stepwise:config
 agents/            # subagent wrapper for orchestration flows
 .claude-plugin/    # plugin + marketplace manifests
 .github/workflows/ # required Claude AI review

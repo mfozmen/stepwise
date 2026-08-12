@@ -33,6 +33,15 @@ You can also state the rules in your own words and they are taken literally:
 *"in small pieces"*, *"don't drown me in technical detail"*, *"use diagrams"*,
 *"problem first, then the solution"*.
 
+## Language
+
+On its first run Stepwise asks which language you want to be taught in and remembers the answer in
+`~/.stepwise/config.md`. Change it any time:
+
+```
+/stepwise:config explain in English
+```
+
 ## What it guarantees
 
 - **You hold the pace.** No turn advances before you say so.
@@ -54,6 +63,7 @@ mistakes. It's written to be readable on its own, independent of any subject it 
 ```
 skills/stepwise/SKILL.md   # the brain: the method
 commands/stepwise.md       # the /stepwise slash command
+commands/config.md         # /stepwise:config — the language setting
 agents/stepwise.md         # subagent wrapper (produces the whole page in one run)
 .claude-plugin/            # plugin + marketplace manifests
 ```
