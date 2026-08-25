@@ -1,0 +1,13 @@
+name: stack-exp
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+jobs:
+  check-one:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "check-one ok"
+  check-two:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "check-two ok"
