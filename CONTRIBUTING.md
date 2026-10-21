@@ -65,3 +65,12 @@ comes from the commits.
 It bumps the version (in both `package.json` and `.claude-plugin/plugin.json`), updates
 `CHANGELOG.md`, tags the release, and creates a GitHub release — all derived from your
 Conventional Commits.
+
+The same package is the opencode plugin (`opencode-stepwise`). Publishing to npm is manual because
+release-it is configured with `npm.publish: false`; after a release run:
+
+```
+npm publish
+```
+
+Until that package is published, install the plugin with a local path as shown in the README.

@@ -59,11 +59,11 @@ cp -r stepwise/skills/stepwise ~/.config/opencode/skills/
 
 (On Windows, copy the same folders into `%USERPROFILE%\.config\opencode\`.)
 
-**As a plugin** — point opencode at the plugin module, or install the npm package once it is
-published:
+**As a plugin** — point opencode at the plugin module. The npm package is `opencode-stepwise`; it
+must be published first (see [CONTRIBUTING.md](CONTRIBUTING.md)), otherwise use the local path:
 
 ```bash
-opencode plugin opencode-stepwise
+opencode plugin opencode-stepwise   # once published
 ```
 
 ```json
@@ -73,8 +73,8 @@ opencode plugin opencode-stepwise
 }
 ```
 
-The plugin registers the commands, the `stepwise` subagent, and the skill path itself. Restart
-opencode after changing its config.
+The plugin registers the commands, the `stepwise` subagent, and the skill path itself, but does not
+replace commands or agents a project already defines. Restart opencode after changing its config.
 
 ## Use
 
