@@ -1,13 +1,26 @@
 {
-  "name": "stepwise",
+  "name": "opencode-stepwise",
   "version": "1.1.0",
   "description": "Teach a dense technical document to someone new to it — step by step, at the user's pace, accumulating into one persistent page.",
+  "type": "module",
+  "main": "./opencode/plugin.js",
+  "files": [
+    ".claude-plugin/",
+    ".opencode/",
+    "agents/",
+    "commands/",
+    "opencode/",
+    "opencode.json",
+    "skills/"
+  ],
   "keywords": [
     "explanation",
     "onboarding",
     "documentation",
     "teaching",
-    "claude-code"
+    "claude-code",
+    "opencode",
+    "opencode-plugin"
   ],
   "license": "MIT",
   "author": "Mehmet Fahri Özmen",
