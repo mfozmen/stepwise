@@ -56,14 +56,15 @@ It does not govern the source — a source in another language is still explaine
 language, with original terms kept where translating them would lose the meaning (product names,
 field names, error strings).
 
-The user can change it later with `/stepwise:config <what they want>` (e.g.
-`/stepwise:config explain in English`). That is the same act: interpret the request, write the file,
-confirm in one line; asked with no request at all, report the language currently configured and ask
-what to change it to. The user never hand-edits it. If the request names no clear language, ask one
-clarifying question rather than writing a guess — and never write an empty or partial config.
+The user can change it later with the config command — `/stepwise-config <what they want>` in
+opencode, `/stepwise:config <what they want>` in Claude Code (e.g. `explain in English`). That is
+the same act: interpret the request, write the file, confirm in one line; asked with no request at
+all, report the language currently configured and ask what to change it to. The user never
+hand-edits it. If the request names no clear language, ask one clarifying question rather than
+writing a guess — and never write an empty or partial config.
 
-Running as a subagent is the one case where this setting is read but never written — see
-`agents/stepwise.md`.
+Running as a subagent is the one case where this setting is read but never written — see the
+plugin's `stepwise` subagent definition.
 
 ---
 

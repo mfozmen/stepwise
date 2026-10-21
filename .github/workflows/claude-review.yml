@@ -69,11 +69,11 @@ jobs:
             tool allowlist, so a bare `gh pr list` will be denied and cost you the run.
 
             You are reviewing this pull request as an ADVISORY reviewer for
-            Stepwise — an open-source Claude Code plugin (a `/stepwise` skill)
-            that teaches a dense technical document to a newcomer: 2–3 sections
-            per turn, stopping until the user says "continue", accumulating into
-            one persistent page. Do NOT approve or block the PR — leave the
-            verdict to the human.
+            Stepwise — an open-source Claude Code and opencode plugin (a
+            `/stepwise` skill) that teaches a dense technical document to a
+            newcomer: 2–3 sections per turn, stopping until the user says
+            "continue", accumulating into one persistent page. Do NOT approve or
+            block the PR — leave the verdict to the human.
 
             How to publish your review:
             - Use `mcp__github_inline_comment__create_inline_comment` for concrete
@@ -82,17 +82,20 @@ jobs:
               it, even if nothing is notable (say so briefly), so the run leaves a
               visible result.
 
-            This repo is a Claude Code skill: markdown prompt files under
-            `skills/`, `commands/`, `agents/`, a plugin manifest under
-            `.claude-plugin/`, and release tooling. Review for:
+            This repo is a Claude Code and opencode plugin: markdown prompt
+            files under `skills/`, `commands/`, `agents/`, opencode wrappers
+            under `.opencode/`, an opencode plugin entry at `opencode/plugin.js`,
+            a plugin manifest under `.claude-plugin/`, and release tooling.
+            Review for:
             - Skill quality: is SKILL.md clear and unambiguous, and does its flow
               actually produce a progressive, user-paced explanation? Would any
               instruction mislead the agent?
             - The two rules the whole method rests on — never advance before the
               user says continue, and never state anything the source does not
               contain. Flag any change that weakens either.
-            - Consistency between SKILL.md, `commands/stepwise.md`, and
-              `agents/stepwise.md` — especially the subagent's altered pacing
+            - Consistency between SKILL.md, the Claude Code wrappers
+              (`commands/`, `agents/`), and the opencode wrappers (`.opencode/`,
+              `opencode/plugin.js`) — especially the subagent's altered pacing
               rules, which must stay explicitly justified.
             - Trigger quality: the skill's frontmatter `description` is what makes
               it fire. Changes there should keep it specific enough not to hijack

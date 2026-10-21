@@ -8,14 +8,18 @@ most changes are to markdown, not code.
 ```
 skills/stepwise/
   SKILL.md         # the brain: the method, its trigger, and the source-loading step
-commands/          # slash commands: /stepwise, /stepwise:config
-agents/            # subagent wrapper for orchestration flows
-.claude-plugin/    # plugin + marketplace manifests
+commands/          # Claude Code slash commands: /stepwise, /stepwise:config
+agents/            # Claude Code subagent wrapper for orchestration flows
+.opencode/         # opencode commands and subagent wrapper
+opencode/          # opencode plugin entry (registers commands, agent, skill)
+opencode.json      # exposes skills/ to opencode in this repo
+.claude-plugin/    # Claude Code plugin + marketplace manifests
 .github/workflows/ # required Claude AI review
 ```
 
 The explanation quality lives in `SKILL.md`. You "teach" Stepwise by refining those rules —
-no model training.
+no model training. The Claude Code and opencode wrappers are deliberately thin; keep them in sync
+with the skill rather than forking the method into them.
 
 ## The two rules that must survive every change
 
@@ -25,10 +29,11 @@ no model training.
 
 A change that weakens either one is not a refinement, and the AI review is asked to flag it.
 
-If you edit `SKILL.md`, check `commands/stepwise.md` and `agents/stepwise.md` still agree with
-it. The agent deliberately diverges where it has no choice — a subagent can't receive a "continue",
-and can't ask the first-run language question. Each divergence stays written down where it applies,
-with its reason.
+If you edit `SKILL.md`, check the Claude Code wrappers (`commands/stepwise.md`,
+`commands/config.md`, `agents/stepwise.md`) and the opencode wrappers (`.opencode/commands/`,
+`.opencode/agents/stepwise.md`) still agree with it. The agents deliberately diverge where they have
+no choice — a subagent can't receive a "continue", and can't ask the first-run language question.
+Each divergence stays written down where it applies, with its reason.
 
 ## Conventions
 
@@ -41,6 +46,8 @@ with its reason.
   secret — generate it with `claude setup-token`.
 - Keep `package.json` and `.claude-plugin/plugin.json` versions in sync (the release hook does
   this for you).
+- opencode-specific changes belong in `.opencode/` and `opencode/plugin.js`; do not make the
+  Claude Code files depend on opencode.
 
 ## Releasing
 
